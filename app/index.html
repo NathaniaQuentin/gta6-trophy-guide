@@ -3,23 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Trophy Guide — All 55 GTA 6 PS5 Trophies</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official names, descriptions and grades, a roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-title">
+    <h1>LEONIDA TROPHY GUIDE</h1>
+    <p class="tagline">Grand Theft Auto VI &middot; PlayStation 5 &middot; all 55 trophies &middot; works offline</p>
+  </div>
+  <div class="tracker-summary" id="trackerSummary" aria-live="polite">
+    <div class="tracker-line"><strong id="earnedLabel">0 / 55</strong><span id="pctLabel">0% to platinum</span></div>
+    <div class="meter"><div class="meter-fill" id="meterFill" style="width:0%"></div></div>
+    <div class="grade-line" id="gradeLine"></div>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<nav class="view-tabs" aria-label="Views">
+  <button id="btnChecklist" class="view-tab active" type="button">Checklist</button>
+  <button id="btnRoadmap" class="view-tab" type="button">Roadmap to Platinum</button>
+  <button id="btnAbout" class="view-tab" type="button">About &amp; Sources</button>
+</nav>
+
+<main>
+  <section id="panelChecklist" class="panel">
+    <div class="controls">
+      <input id="searchBox" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+      <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind"></div>
+      <label class="spoiler-switch"><input id="spoilerBox" type="checkbox"> Spoiler-free mode <span class="switch-hint">hides story trophies until earned</span></label>
+      <div class="progress-io">
+        <button id="btnExport" type="button">Export progress</button>
+        <button id="btnImport" type="button">Import progress</button>
+        <input id="fileImport" type="file" accept="application/json,.json" hidden>
+      </div>
+    </div>
+    <p class="alert-missable" id="alertMissable"></p>
+    <div class="two-col">
+      <ol class="trophy-rows" id="trophyRows"></ol>
+      <aside class="guide-panel" id="guidePanel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="panelRoadmap" class="panel" hidden>
+    <h2>Roadmap to the platinum — Vice Got a Price!</h2>
+    <p class="intro">One playthrough, about 200 hours (PowerPyx estimate), no online trophies, no difficulty trophies, no mission medals. Difficulty 4/10: long, not hard.</p>
+    <ol class="stages" id="stageList"></ol>
+    <div class="tip-box" id="tipBox"></div>
+  </section>
+
+  <section id="panelAbout" class="panel" hidden>
+    <h2>About &amp; sources</h2>
+    <div id="aboutContent"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive, Sony or PlayStation. Trophy names and descriptions are shown as PlayStation publishes them; every guide text is written for this entry, in its own words, and cites its sources. No game artwork or logos are used.</p>
+  <p id="footNote"></p>
+</footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>
