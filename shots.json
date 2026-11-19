@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-checklist.jpg","note":"Cover: checklist with official names, descriptions and grades; missable banner; Positive Mental Attitude (the potentially missable trophy) open in the detail panel with its guide, steps and sources; spoiler-free mode off.","path":"/","viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","note":"Roadmap to Platinum tab: the 3 stages with hours and the trophies each stage covers.","path":"/","viewport":{"height":800,"width":1280}},{"file":"3-missable.jpg","note":"Missable filter active: the single potentially missable trophy, Positive Mental Attitude, with its full guide and sources open beside it.","path":"/","viewport":{"height":800,"width":1280}},{"file":"4-tracker.jpg","note":"Tracker at work: spoiler-free mode on (unearned story trophies hidden as ???), 12 trophies earned, progress 12/55 with per-grade counts, export/import buttons, A Long Road open in the detail panel.","path":"/","viewport":{"height":800,"width":1280}}]
